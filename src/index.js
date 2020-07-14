@@ -33,7 +33,7 @@ app.use('/api/expenses', expenses);
 app.use('/api/categories', categories);
 app.use('/api/expenseTypes', expenseTypes);
 app.use('/api/stats', stats);
-app.use(express.static(path.join(__dirname, "client", "build")))
+app.use(express.static(path.join(__dirname, "../client/build")))
 
 
 mongoose.connect(process.env.MNG_CREDENTIALS, { useUnifiedTopology: true, useNewUrlParser: true }, ()=>{
@@ -41,7 +41,7 @@ mongoose.connect(process.env.MNG_CREDENTIALS, { useUnifiedTopology: true, useNew
 })
 
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
 app.listen(PORT, ()=>{
