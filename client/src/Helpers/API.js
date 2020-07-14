@@ -13,7 +13,7 @@ export const getTotal = (filter) => {
 
   const data = {filter}
 
-  return API.post('/stats/total/full', data);
+  return API.post('/api/stats/total/full', data);
 
 }
 
@@ -21,7 +21,7 @@ export const getTotalNested = (filter) => {
 
   const data = {filter}
 
-  return API.post('/stats/total/nested', data);
+  return API.post('/api/stats/total/nested', data);
 
 }
 
@@ -32,7 +32,7 @@ export const getExpenses = (filter, type) => {
     data.type = type;
   }
   
-  return API.post('/expenses/date', data);
+  return API.post('/api/expenses/date', data);
   
 }
 
@@ -43,7 +43,7 @@ export const postExpense = (type, cost) => {
   }
   const data = {type, cost}
 
-  return API.post('/expenses/', data);
+  return API.post('/api/expenses/', data);
 
 }
 
@@ -54,7 +54,7 @@ export const postType = (category, name) => {
   }
   const data = {category, name}
 
-  return API.post('/expenseTypes/', data);
+  return API.post('/api/expenseTypes/', data);
 
 }
 
@@ -65,7 +65,7 @@ export const postCategory = (name) => {
   }
   const data = {name}
 
-  return API.post('/categories/', data);
+  return API.post('/api/categories/', data);
 
 }
 
@@ -75,7 +75,7 @@ export const deleteExpense = (exp) => {
     return null;
   }
 
-  return API.delete(`/expenses/p/${exp}`);
+  return API.delete(`/api/expenses/p/${exp}`);
 
 }
 
@@ -85,7 +85,7 @@ export const deleteType = (type) => {
     return null;
   }
 
-  return API.delete(`/expenseTypes/p/${type}`);
+  return API.delete(`/api/expenseTypes/p/${type}`);
 
 }
 
@@ -95,7 +95,7 @@ export const deleteCategory = (cat) => {
     return null;
   }
 
-  return API.delete(`/categories/p/${cat}`);
+  return API.delete(`/api/categories/p/${cat}`);
 
 }
 
