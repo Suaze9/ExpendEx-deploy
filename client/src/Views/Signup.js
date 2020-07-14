@@ -73,7 +73,7 @@ const Signup = () => {
               </div>
             :
               <Form className="signupForm" onSubmit={onSignup}>
-                <h3>Log in</h3>
+                <h3>Sign up</h3>
                 <FormGroup>
                   <Row style={{margin: "0"}}>
                     <label>Name</label>
