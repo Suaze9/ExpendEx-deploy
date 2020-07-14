@@ -1,0 +1,11 @@
+
+.navBar{
+    height: 60px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.childContent {
+    margin-top: 60px;
+    height: 100%;
+}

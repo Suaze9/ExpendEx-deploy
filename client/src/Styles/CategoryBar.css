@@ -1,0 +1,99 @@
+
+.expenseCard{
+    min-height: 130px;
+    margin-top: 40px;
+    display: flex;
+}
+
+.expenseCardHeader{
+    place-self: center;
+    margin-top: 2px;
+    
+}
+
+.categoryContainerHeader {
+    margin: 5px;
+}
+
+.categoryHeader{
+
+}
+
+.categoryContainer{
+    margin: 10px;
+}
+
+.chartDiv {
+    width: 90%;
+    height: 40vh;
+    place-self: center;
+}
+
+.typeContainer{
+    display: grid;
+    padding-bottom: 10px;
+}
+
+.deepChild {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline;
+}
+.compName{
+    margin: 10px !important;
+    float: left;
+}
+
+.compCost {
+    margin: 10px !important;
+    float: right;
+}
+
+.deepChildCenter {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: flow-root;
+}
+
+.compCenter {
+    margin: 10px !important;
+    float: right;
+}
+
+.compInput {
+    margin-top: 13px !important;
+    margin-bottom: 13px !important;
+    width: 60%;
+    float: left;
+}
+
+.formGroupM {
+    float: right;
+}
+
+.formExpenses {
+    text-align: center;
+    display: flow-root;
+    align-items: baseline;
+}
+
+.labelCost {
+    margin: 10px;
+}
+
+.inputCost {
+    
+}
+
+.buttonExp {
+    height: max-content;
+    margin-left: 30px;
+    margin-right: 35px;
+    float: right;
+}
