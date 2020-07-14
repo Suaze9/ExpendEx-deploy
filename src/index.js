@@ -24,6 +24,7 @@ const expenses = require('./routes/expenses');
 const categories = require('./routes/categories');
 const expenseTypes = require('./routes/expenseTypes');
 const stats = require('./routes/stats');
+const path = require("path");
 
 
 app.use('/api/auth', auth);
@@ -32,11 +33,16 @@ app.use('/api/expenses', expenses);
 app.use('/api/categories', categories);
 app.use('/api/expenseTypes', expenseTypes);
 app.use('/api/stats', stats);
+app.use(express.static(path.join(__dirname, "client", "build")))
 
 
 mongoose.connect(process.env.MNG_CREDENTIALS, { useUnifiedTopology: true, useNewUrlParser: true }, ()=>{
     console.log('Databse connected :D');
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, ()=>{
     console.log(`listening to port ${PORT}`)
