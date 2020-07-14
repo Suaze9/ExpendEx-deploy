@@ -34,7 +34,7 @@ const Login = () => {
       loading: true,
     }));
 
-    API.post('/auth/login', body)
+    API.post('/api/auth/login', body)
       .then((res)=>{
         st(res.data.jwt);
         setToken(res.data.jwt, res.data.name, userCreds.persist);

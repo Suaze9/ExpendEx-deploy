@@ -36,7 +36,7 @@ const Signup = () => {
       loading: true,
     }));
 
-    API.post('/auth/register', body)
+    API.post('/api/auth/register', body)
       .then((res)=>{
         st(res.data.jwt);
         setToken(res.data.jwt, res.data.name, userCreds.persist);
